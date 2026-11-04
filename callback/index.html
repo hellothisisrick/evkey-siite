@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>EVKey</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<body>
+  <p id="code">No code in the query string.</p>
+  <script>
+    const code = new URLSearchParams(location.search).get("code");
+    if (code) {
+      document.getElementById("code").textContent = "code=" + code;
+    }
+  </script>
+</body>
+</html>
